@@ -20,12 +20,16 @@ class LaunchWhatsappService {
 
   Future<void> launchWhatsapp(String number) async {
     final _url = Uri(
-      scheme: 'whatsapp',
-      host: 'send',
+      scheme: 'https',
+      host: 'api.whatsapp.com',
+      path: 'send',
       queryParameters: {
         'phone': _sanitizeNumber(number),
       },
     );
-    await launchUrl(_url);
+
+    await launchUrl(_url, mode: LaunchMode.externalApplication);
+
+    // await launch('whatsapp://send?phone=5538998837290');
   }
 }
