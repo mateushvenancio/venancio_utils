@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:venancio_utils/services/launch_whatsapp.dart';
+import 'package:venancio_utils/services/launch_whatsapp_service.dart';
 
 class LaunchWhatsappScreen extends StatelessWidget {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
